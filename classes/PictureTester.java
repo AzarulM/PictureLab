@@ -11,7 +11,7 @@ public class PictureTester
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
-    Picture beach = new Picture("beach.jpg");
+    Picture beach = new Picture("meme1.jpg");
     beach.explore();
     beach.zeroBlue();
     beach.explore();
@@ -49,6 +49,10 @@ public class PictureTester
     Picture swan = new Picture("swan.jpg");
     swan.edgeDetection(10);
     swan.explore();
+  }
+  public static void KeepOnlyBlue()
+  {
+
   }
   
   /** Main method for testing.  Every class can have a main

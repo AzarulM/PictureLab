@@ -44,10 +44,29 @@ public class IntArrayWorker
 
   public int getLargest()
   {
+    int largest = 0;
+
+    for (int[] row : matrix)
+    {
+      for (int i : row)
+      {
+        if (i > largest)
+        {
+          largest = i;
+        }
+      }
+    }
+
+    return largest;
+  }
+  public int getColTotal(int col)
+  {
+  int total = 0;
     for (int i = 0; i < matrix.length; i++)
     {
-      
+      total = total + matrix[i][col];
     }
+    return total;
   }
   
   /**
