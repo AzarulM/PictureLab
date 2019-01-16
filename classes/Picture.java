@@ -97,6 +97,31 @@ public class Picture extends SimplePicture
       }
     }
   }
+  public void negate()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setRed(255-(pixelObj.getRed()));
+        pixelObj.setBlue(255-(pixelObj.getBlue()));
+        pixelObj.setGreen(255-(pixelObj.getGreen()));
+      }
+    }
+  }
+  public void Grayscale()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        double average = pixelObj.getRed() + pixelObj.getBlue() + pixelObj.getGreen();
+      }
+    }
+  }
+
   
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
@@ -216,7 +241,15 @@ public class Picture extends SimplePicture
       }
     }
   }
-  
+  public void testOnlyBlue() {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels) {
+      for (Pixel pixelObj : rowArray) {
+        pixelObj.setGreen(0);
+        pixelObj.setRed(0);
+      }
+    }
+  }
   
   /* Main method for testing - each class in Java can have a main 
    * method 

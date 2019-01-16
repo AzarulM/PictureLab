@@ -50,9 +50,12 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
-  public static void KeepOnlyBlue()
+  public static void testKeepOnlyBlue()
   {
-
+    Picture meme = new Picture("meme1.jpg");
+    meme.explore();
+    meme.testOnlyBlue();
+    meme.explore();
   }
   
   /** Main method for testing.  Every class can have a main
@@ -62,12 +65,12 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    //testKeepOnlyBlue();
+    //testZeroBlue();
+   // testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
-    //testGrayscale();
+    testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
@@ -84,5 +87,19 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
+  }
+
+  private static void testGrayscale() {
+    Picture beach = new Picture("meme1.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
+  }
+
+  private static void testNegate() {
+    Picture beach = new Picture("meme1.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
   }
 }
